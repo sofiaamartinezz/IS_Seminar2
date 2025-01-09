@@ -10,7 +10,7 @@ This project aims to classify emotions in tweets using **Machine Learning** tech
 - **Implementation of Multiple Models**: Compare the performance of different classification algorithms.
 - **Hyperparameter Tuning**: Fine-tune the models' hyperparameters to improve performance.
 
-### First task
+### Task 1 - Data preparation and exploration
 
 We started by exploring the data.
 
@@ -36,9 +36,4 @@ The project includes several classification models, including:
 - **Bagging**
 - **Gradient Boosting**
 
-### Installation
 
-To install the dependencies and run the project, you can create a virtual environment and install the required packages with:
-
-```bash
-pip install -r requirements.txt
