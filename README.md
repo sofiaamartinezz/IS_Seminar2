@@ -46,16 +46,37 @@ KNN,
 Random Forest,  
 Bagging  
 
+![K-Nearest-Neightbour](graphs/hp_cv_knn.png)
+
+As we can see KNN with K = 7 produces the best results. Even better then the Base KNN Clasifier because of Cross-Valdiation.
+
 ![Random Forest](graphs/rf_accuracy.png)
 
 Grid search produces best results because it has overview over all options and Random Search dosent find the good Options in this instance so the Result is lower than the base Classifier.
 
 **Best parameter:**
-Grid Search: 'criterion': 'gini',
-'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 30, 'n_estimators': 100
+Grid Search:
 
 | Hyperparameter    | Best Value    |
 |-------------------|---------------|
 | criterion         | gini          |
+| max_depth         | None          |
+| min_samples_leaf  | 1             |
+| max_samples_split | 30            |
+| n_estimators      | 100           |
+
+
+Radom Search:  {'n_estimators': 50, 'max_features': 'log2', 'max_depth': None}
+
+| Hyperparameter    | Best Value    |
+|-------------------|---------------|
+| max_features      | log2          |
+| max_depth         | None          |
+| n_estimators      | 50            |
+
+The main diffence is in the number of Estimators choosen so the lower score makes sense because with a lower amount of trees the Forest cant capture as many relations in the data.
+
+
+
 
 
