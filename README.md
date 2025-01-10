@@ -40,6 +40,10 @@ We first compare the accuracy of the diffent models to select a few that we will
 
 ![Models Accuracy](graphs/accruracy_base.png)
 
+![Models Accuracy with half the Dataset](graphs/accruracy_base_half.png)
+
+
+
 ## Cross validation and Hyperparameter Tuning
 We will implement cross validation and Hyperparameter tuning for selected base models which already show promissing results (hight accuracy and consistent confussion matrix) so:  
 **KNN**  
