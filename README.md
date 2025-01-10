@@ -42,7 +42,9 @@ We first compare the accuracy of the diffent models to select a few that we will
 
 ![Models Accuracy with half the Dataset](graphs/accruracy_base_half.png)
 
+![Models Accuracy difference](graphs/accuracy_comp.png)
 
+Note: Bagging and Radnom Forest need bigger amounts of data for tuning more paramaters (multiple models/Trees) so have the biggest loss with reduced dataset.
 
 ## Cross validation and Hyperparameter Tuning
 We will implement cross validation and Hyperparameter tuning for selected base models which already show promissing results (hight accuracy and consistent confussion matrix) so:  
@@ -82,9 +84,7 @@ The main diffence is in the number of Estimators choosen so the lower score make
 
 **Bagging**  
 
-
-
-
+![Bagging](graphs/bc_accuracy.png)
 
 
 
