@@ -36,4 +36,26 @@ The project includes several classification models, including:
 - **Bagging**
 - **Gradient Boosting**
 
+We first compare the accuracy of the diffent models to select a few that we will imporve furhter.
+
+![Models Accuracy](graphs/accruracy_base.png)
+
+## Cross validation and Hyperparameter Tuning
+We will implement cross validation and Hyperparameter tuning for selected base models which already show promissing results (hight accuracy and consistent confussion matrix) so:  
+KNN,  
+Random Forest,  
+Bagging  
+
+![Random Forest](graphs/rf_accuracy.png)
+
+Grid search produces best results because it has overview over all options and Random Search dosent find the good Options in this instance so the Result is lower than the base Classifier.
+
+**Best parameter:**
+Grid Search: 'criterion': 'gini',
+'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 30, 'n_estimators': 100
+
+| Hyperparameter    | Best Value    |
+|-------------------|---------------|
+| criterion         | gini          |
+
 
