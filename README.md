@@ -42,13 +42,13 @@ We first compare the accuracy of the diffent models to select a few that we will
 
 ## Cross validation and Hyperparameter Tuning
 We will implement cross validation and Hyperparameter tuning for selected base models which already show promissing results (hight accuracy and consistent confussion matrix) so:  
-KNN,  
-Random Forest,  
-Bagging  
+**KNN**  
 
 ![K-Nearest-Neightbour](graphs/hp_cv_knn.png)
 
 As we can see KNN with K = 7 produces the best results. Even better then the Base KNN Clasifier because of Cross-Valdiation.
+
+**Random Forest**   
 
 ![Random Forest](graphs/rf_accuracy.png)
 
@@ -75,6 +75,10 @@ Radom Search:  {'n_estimators': 50, 'max_features': 'log2', 'max_depth': None}
 | n_estimators      | 50            |
 
 The main diffence is in the number of Estimators choosen so the lower score makes sense because with a lower amount of trees the Forest cant capture as many relations in the data.
+
+**Bagging**  
+
+
 
 
 
