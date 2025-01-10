@@ -46,7 +46,7 @@ We will implement cross validation and Hyperparameter tuning for selected base m
 
 ![K-Nearest-Neightbour](graphs/hp_cv_knn.png)
 
-As we can see KNN with K = 7 produces the best results. Even better then the Base KNN Clasifier because of Cross-Valdiation.
+As we can see KNN with K = 7 produces the best results. Even better then the Base KNN Clasifier because of Cross-Valdiation.  
 
 **Random Forest**   
 
