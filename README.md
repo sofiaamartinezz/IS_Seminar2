@@ -60,7 +60,6 @@ As we can see KNN with K = 7 produces the best results. Even better then the Bas
 
 Grid search produces best results because it has overview over all options and Random Search dosent find the good Options in this instance so the Result is lower than the base Classifier.
 
-**Best parameter:**
 Grid Search:
 
 | Hyperparameter    | Best Value    |
@@ -72,7 +71,7 @@ Grid Search:
 | n_estimators      | 100           |
 
 
-Radom Search:  {'n_estimators': 50, 'max_features': 'log2', 'max_depth': None}
+Radom Search:  
 
 | Hyperparameter    | Best Value    |
 |-------------------|---------------|
