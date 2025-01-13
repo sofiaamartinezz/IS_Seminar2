@@ -86,4 +86,35 @@ The main diffence is in the number of Estimators choosen so the lower score make
 ![Bagging](graphs/bc_accuracy.png)
 
 
+### Advanced Machine learning
+
+We tried two approaches:
+- **mixing KNN, BaggingClassifier and RandomForest.** We prepared the data with the TF-IDF vectorizer.
+- **Neuronal Networks**. We prepared the data with Tokenizer(max_words), texts_to_sequences and pad_sequences and we also prepared the target column with to_categorical.
+
+Also, to split the data with train_test_split we used stratify=df_balanced["label"] to keep into account the imbalance between classes
+
+
+
+We tried multiple approaches without getting good results and lots of overfitting until we realized that the problem was focused on the labels with not that much data so we decided to use the amplified HuggingFace dataset and that's when we started getting nice results, especially with the neural network.
+
+Also, this is the classes distribution of the large dataset so we decided to downsize labels 0 and 1 to 60000.
+
+![Text length Large Dataset](graphs/text_length_large_dataset.png)
+
+Now, for the mixing models we got these results
+
+
+
+And for the Neural Network we decided to use this structure:
+
+![Structure Neural Network](graphs/nn_model.png)
+
+And got this result:
+
+![Neural Network Results](graphs/nn_results.png)
+
+
+
+
 
