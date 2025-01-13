@@ -18,7 +18,7 @@ We started by exploring the data.
 
 We have some imbalance on the emotions. This can affect model performance, as models might be biased towards the most frequent classes. So it can be much more useful to evaluate additional metrics like F1-score or the confusion matrix to get a more complete view of how the model is classifying emotions, especially for underrepresented classes.
 
-![Text length](graphs/data_distribution.png)
+![Text length](graphs/text_length.png)
 
  The length of the text can affect the vectorization process. And, as we can see in the graph, most texts cluster around the 50-75 character range, with a gradual decline in frequency for longer texts. So we used TF-IDF to normalize this by down-weighting terms that appear very frequently across all documents. This normalization helps prevent overly frequent terms from dominating the model, giving better feature representations. So our texts now look like this:
 
@@ -89,22 +89,22 @@ The main diffence is in the number of Estimators choosen so the lower score make
 ### Advanced Machine learning
 
 We tried two approaches:
-- **mixing KNN, BaggingClassifier and RandomForest.** We prepared the data with the TF-IDF vectorizer.
+
+- **Mixing KNN, BaggingClassifier and RandomForest.** We prepared the data with the TF-IDF vectorizer. Gave 70% to RandomForest, 20% to BaggingClassifier and 10% to KNN.
+
 - **Neuronal Networks**. We prepared the data with Tokenizer(max_words), texts_to_sequences and pad_sequences and we also prepared the target column with to_categorical.
 
-Also, to split the data with train_test_split we used stratify=df_balanced["label"] to keep into account the imbalance between classes
-
-
+Also, when splitting the data with train_test_split we used stratify=df_balanced["label"] to keep into account the imbalance between classes.
 
 We tried multiple approaches without getting good results and lots of overfitting until we realized that the problem was focused on the labels with not that much data so we decided to use the amplified HuggingFace dataset and that's when we started getting nice results, especially with the neural network.
 
 Also, this is the classes distribution of the large dataset so we decided to downsize labels 0 and 1 to 60000.
 
-![Text length Large Dataset](graphs/text_length_large_dataset.png)
+![Text length Large Dataset](graphs/text_length_large_ds.png)
 
-Now, for the mixing models we got these results
+Now, we didn't get quite good results for the Mixing models as it was not capable of predictin the minority classes. This is the code we used:
 
-
+![Mixing models code](graphs/mm_code.png)
 
 And for the Neural Network we decided to use this structure:
 
