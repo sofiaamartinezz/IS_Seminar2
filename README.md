@@ -92,7 +92,7 @@ We tried two approaches:
 
 - **Mixing KNN, BaggingClassifier and RandomForest.** We prepared the data with the TF-IDF vectorizer. Gave 70% to RandomForest, 20% to BaggingClassifier and 10% to KNN.
 
-- **Neuronal Networks**. We prepared the data with Tokenizer(max_words), texts_to_sequences and pad_sequences and we also prepared the target column with to_categorical.
+- **Deep Neuronal Network**. We prepared the data with Tokenizer(max_words), texts_to_sequences and pad_sequences and we also prepared the target column with to_categorical.
 
 Also, when splitting the data with train_test_split we used stratify=df_balanced["label"] to keep into account the imbalance between classes.
 
@@ -113,6 +113,11 @@ And for the Neural Network we decided to use this structure:
 And got this result:
 
 ![Neural Network Results](graphs/nn_results.png)
+
+And the learning and loss curves:
+
+![Neural Network Graphs](graphs/nn_graph_results.png)
+
 
 
 
